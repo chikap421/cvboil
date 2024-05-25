@@ -1,4 +1,4 @@
-# Code Project
+# High Pressure Water Project
 
 This project contains various MATLAB and ImageJ scripts for processing and analyzing images, with a focus on bubble metrics and machine learning.
 
