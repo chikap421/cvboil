@@ -1,7 +1,7 @@
 clc; close all; clear;
 
 L = 0.001;
-numSimulations = 5000;
+numSimulations = 20e3;
 N_values = linspace(20, 250, 24);
 R_values = linspace(10E-6, 200E-6, 10);
 results = struct();
@@ -41,6 +41,7 @@ for N_idx = 1:length(N_values)
             if mod(currentIteration, 100) == 0
                 fprintf('Progress: %.2f%%\n', (currentIteration / totalIterations) * 100);
             end
+            
         end
 
         field_R = ['R_', strrep(sprintf('%.0e', R), 'e-', 'e_neg')];
@@ -76,12 +77,12 @@ ME_Perimeter_Matrix = extractMatrixFromResults(results, 'ME_perimeter');
 % createHistogramPlot(ME_Perimeter_Matrix(:), 'ME of Perimeter', 'Probability Density (1/\mum)', 'ME for Perimeter', 2, 'linear');
 % createHistogramPlot(PRE_Area_Matrix(:), 'PRE of Area (%)', 'Probability Density (1\mum^2)', 'PRE for Area', 3, 'linear');
 % createHistogramPlot(PRE_Perimeter_Matrix(:), 'PRE of Perimeter (%)', 'Probability Density (\mum)', 'PRE for Perimeter', 4, 'linear');
-% 
-% figPosition1 = [100, 100, 560, 420];
-% figPosition2 = [700, 100, 560, 420];
-% figPosition3 = [100, 550, 560, 420];
-% figPosition4 = [700, 550, 560, 420];
-% 
+
+figPosition1 = [100, 100, 560, 420];
+figPosition2 = [700, 100, 560, 420];
+figPosition3 = [100, 550, 560, 420];
+figPosition4 = [700, 550, 560, 420];
+
 % createSurfacePlot(N_values_um, R_values_um, PRE_Area_Matrix, 'PRE of Area (%)', fontSize, 'PRE_Area.png', figPosition1);
 % createSurfacePlot(N_values_um, R_values_um, PRE_Perimeter_Matrix, 'PRE of Perimeter (%)', fontSize, 'PRE_Perimeter.png', figPosition2);
 % createSurfacePlot(N_values_um, R_values_um, ME_Area_Matrix, 'ME of Area', fontSize, 'ME_Area.png', figPosition3);

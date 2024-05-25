@@ -2,7 +2,7 @@
 clc; close all; clear;
 
 L = 0.001;
-N = 100;
+N = 50;
 R = 50E-6;
 A_theoretical = pi * R^2;
 P_theoretical = 2 * pi * R;

@@ -2,7 +2,7 @@
 clc; close all; clear;
 
 L = 0.001;
-numSimulations = 5000;
+numSimulations = 20e3;
 N_values = linspace(20, 250, 24);
 R_values = linspace(10E-6, 200E-6, 10);
 results = struct();
@@ -51,12 +51,11 @@ end
 totalTime = toc;
 fprintf('Total simulation time: %.2f seconds.\n', totalTime);
 
-save('bubble_discretization_results.mat', 'results');
-
+save('bubble_discretization_results_erosion.mat', 'results');
 
 %% Load Results and Plot
 
-load('bubble_discretization_results.mat', 'results');
+load('bubble_discretization_results_erosion.mat', 'results');
 
 R_values_um = linspace(10E-6, 200E-6, 10) * 1e6;
 N_values_um = (0.001 ./ linspace(20, 250, 24)) * 1e6;
