@@ -1,4 +1,4 @@
-# Florian Project
+# Nitrogen Project
 
 This project contains various MATLAB and ImageJ scripts for processing and analyzing bubble images and videos.
 
