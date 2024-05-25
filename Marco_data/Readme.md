@@ -1,4 +1,4 @@
-# Marco Data Project
+# Liquid Argon, Nitrogen, and FC-72 Project
 
 This project contains various MATLAB scripts for processing and analyzing bubble images and videos.
 
