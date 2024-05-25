@@ -28,7 +28,7 @@ This repository contains split files of U-Net models used for segmenting bubbles
    cd /path/to/directory
    ```
 3. Run the following command to combine and extract the files:
-```sh
+   ```sh
    7z x compressed_models_split.7z.001
-```
+   ```
 4. 7-Zip will automatically combine the split files and extract the U-Net model files into the current directory.
